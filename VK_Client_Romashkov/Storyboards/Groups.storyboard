@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rr0-qS-gov">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Groups-->
+        <scene sceneID="B2i-jS-u4F">
+            <objects>
+                <tableViewController id="TKH-IO-91r" customClass="MyGroupsTableViewController" customModule="VK_Client_Romashkov" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KG6-S0-Oei">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myGroupsCell" rowHeight="94" id="VCS-DX-IE7" customClass="GroupCell" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VCS-DX-IE7" id="Lpi-DB-DEW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of my groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZd-n0-ePI">
+                                            <rect key="frame" x="115" y="36.5" width="259" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAR-lK-JFx" customClass="AvatarControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="22" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="YeU-ng-Lqq"/>
+                                                <constraint firstAttribute="width" constant="50" id="jKM-HK-i6j"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="ITHumor"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IAR-lK-JFx" firstAttribute="top" secondItem="Lpi-DB-DEW" secondAttribute="topMargin" constant="11" id="Eu6-xI-tbg"/>
+                                        <constraint firstItem="fZd-n0-ePI" firstAttribute="leading" secondItem="IAR-lK-JFx" secondAttribute="trailing" constant="45" id="GH4-Jr-ZNh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fZd-n0-ePI" secondAttribute="trailing" constant="20" id="b4b-Kk-bpg"/>
+                                        <constraint firstItem="IAR-lK-JFx" firstAttribute="leading" secondItem="Lpi-DB-DEW" secondAttribute="leadingMargin" id="cs0-Ww-Ezv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IAR-lK-JFx" secondAttribute="bottom" constant="11" id="lNt-Ld-m39"/>
+                                        <constraint firstItem="fZd-n0-ePI" firstAttribute="centerY" secondItem="Lpi-DB-DEW" secondAttribute="centerY" id="lfc-xZ-nsX"/>
+                                        <constraint firstItem="IAR-lK-JFx" firstAttribute="centerY" secondItem="Lpi-DB-DEW" secondAttribute="centerY" id="ypH-bE-5TE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groupImageView" destination="IAR-lK-JFx" id="aoe-4s-wWL"/>
+                                    <outlet property="groupNameLabel" destination="fZd-n0-ePI" id="f8q-7K-Vlq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TKH-IO-91r" id="iC3-LW-dpC"/>
+                            <outlet property="delegate" destination="TKH-IO-91r" id="bX9-AJ-R8L"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Groups" id="6H3-NG-ueP">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tFs-xs-heC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uaB-NE-nc6">
+                            <color key="tintColor" red="0.32859170809999999" green="0.51566946560000004" blue="0.74384949280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="tSe-hg-R1D" kind="show" id="6I2-Wk-jbA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vq-go-vi4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492.753623188406" y="-215.625"/>
+        </scene>
+        <!--All Groups-->
+        <scene sceneID="ReR-P1-0oO">
+            <objects>
+                <tableViewController id="tSe-hg-R1D" customClass="AllGroupsTableViewController" customModule="VK_Client_Romashkov" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="I2V-oV-Uur">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="xN0-WO-ebg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="tSe-hg-R1D" id="vg2-6g-6l8"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="allGroupsCell" rowHeight="93" id="w4s-Vc-5lJ" customClass="GroupCell" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="93"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w4s-Vc-5lJ" id="Ssx-1t-FOH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of all groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-tx-hoy">
+                                            <rect key="frame" x="115" y="36" width="259" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-jq-tYc" customClass="AvatarControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="21.5" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="P5p-RT-c6e"/>
+                                                <constraint firstAttribute="width" constant="50" id="sOE-t1-5KT"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="ITHumor"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NQD-tx-hoy" firstAttribute="centerY" secondItem="Ssx-1t-FOH" secondAttribute="centerY" id="2ir-8P-1Ct"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NQD-tx-hoy" secondAttribute="trailing" constant="20" id="Xta-Sl-7aE"/>
+                                        <constraint firstItem="1Az-jq-tYc" firstAttribute="top" secondItem="Ssx-1t-FOH" secondAttribute="topMargin" constant="10.5" id="fLi-9C-VfK"/>
+                                        <constraint firstItem="NQD-tx-hoy" firstAttribute="leading" secondItem="1Az-jq-tYc" secondAttribute="trailing" constant="45" id="hfD-Cj-cWJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1Az-jq-tYc" secondAttribute="bottom" constant="10.5" id="lBu-hO-aoc"/>
+                                        <constraint firstItem="1Az-jq-tYc" firstAttribute="centerY" secondItem="Ssx-1t-FOH" secondAttribute="centerY" id="off-Av-E25"/>
+                                        <constraint firstItem="1Az-jq-tYc" firstAttribute="leading" secondItem="Ssx-1t-FOH" secondAttribute="leadingMargin" id="rQn-qf-xKf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groupImageView" destination="1Az-jq-tYc" id="Qnu-Fv-LV8"/>
+                                    <outlet property="groupNameLabel" destination="NQD-tx-hoy" id="5p3-uK-b7z"/>
+                                    <segue destination="Aof-6r-gr8" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="t6f-qw-Jw1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tSe-hg-R1D" id="O2z-3z-Kkv"/>
+                            <outlet property="delegate" destination="tSe-hg-R1D" id="FXW-XN-RZR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Groups" id="SHO-uK-ANz"/>
+                    <connections>
+                        <outlet property="searchBar" destination="xN0-WO-ebg" id="rXk-no-3XW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4d1-Dn-Erj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Aof-6r-gr8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3334.7826086956525" y="-215.625"/>
+        </scene>
+        <!--My Groups-->
+        <scene sceneID="mua-bh-GkB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rr0-qS-gov" customClass="CustomNavigationViewController" customModule="VK_Client_Romashkov" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Groups" id="akd-8S-1Xq">
+                        <imageReference key="image" image="person.3" catalog="system" symbolScale="small"/>
+                        <color key="badgeColor" red="0.32859170809999999" green="0.51566946560000004" blue="0.74384949280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PHS-IH-26y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.32859170809999999" green="0.51566946560000004" blue="0.74384949280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.32859170809999999" green="0.51566946560000004" blue="0.74384949280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TKH-IO-91r" kind="relationship" relationship="rootViewController" id="i0S-20-xbO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHu-a8-eLn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="-216"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ITHumor" width="1000" height="998"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

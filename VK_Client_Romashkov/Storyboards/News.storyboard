@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bNM-C5-d9O">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="Pot-YU-3bN">
+            <objects>
+                <tableViewController id="qfT-8v-hOg" customClass="NewsViewController" customModule="VK_Client_Romashkov" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h98-kB-cHx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="669" id="O4J-LM-hz9" customClass="NewsCell" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="669"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O4J-LM-hz9" id="Ubn-JC-vxd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="669"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TJh-5u-yzA">
+                                            <rect key="frame" x="20" y="11" width="374" height="647"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-M9-MJT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-sZ-7eP" customClass="AvatarControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="OMw-BF-iGE"/>
+                                                                <constraint firstAttribute="width" constant="50" id="ZR8-FO-qcB"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="IamProgrammist"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zj1-dt-5o0">
+                                                            <rect key="frame" x="60" y="0.0" width="314" height="50"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя группы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-PP-D76">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="Auo-Ze-vkN"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата поста" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-hs-cFO">
+                                                                    <rect key="frame" x="0.0" y="30" width="88.5" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="Vjb-LJ-efs"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="JT6-E7-yqk"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="zj1-dt-5o0" firstAttribute="leading" secondItem="Qed-sZ-7eP" secondAttribute="trailing" constant="10" id="KLA-OT-ok9"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4SV-uV-Vm0">
+                                                    <rect key="frame" x="0.0" y="80.5" width="374" height="102"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст новости" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKs-kh-tDB">
+                                                            <rect key="frame" x="1" y="1" width="373" height="100"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="WKs-kh-tDB" firstAttribute="height" secondItem="4SV-uV-Vm0" secondAttribute="height" multiplier="0.980392" id="CDx-3z-Z45"/>
+                                                        <constraint firstItem="WKs-kh-tDB" firstAttribute="top" secondItem="XED-cs-osE" secondAttribute="top" constant="1" id="FgE-b9-tHG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="WKs-kh-tDB" secondAttribute="bottom" constant="1" id="HBT-CW-lfA"/>
+                                                        <constraint firstItem="WKs-kh-tDB" firstAttribute="width" secondItem="4SV-uV-Vm0" secondAttribute="width" multiplier="0.303476" constant="259.5" id="l46-oa-h4N"/>
+                                                        <constraint firstItem="WKs-kh-tDB" firstAttribute="leading" secondItem="XED-cs-osE" secondAttribute="leading" constant="1" id="ncT-Qx-vqu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WKs-kh-tDB" secondAttribute="trailing" id="oNl-Ae-hTS"/>
+                                                        <constraint firstItem="XED-cs-osE" firstAttribute="bottom" secondItem="WKs-kh-tDB" secondAttribute="bottom" constant="1" id="xoN-gG-IbF"/>
+                                                    </constraints>
+                                                    <viewLayoutGuide key="contentLayoutGuide" id="4jC-37-T92"/>
+                                                    <viewLayoutGuide key="frameLayoutGuide" id="XED-cs-osE"/>
+                                                </scrollView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newCode" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8G-6B-wlv">
+                                                    <rect key="frame" x="0.0" y="212.5" width="374" height="374"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="g8G-6B-wlv" secondAttribute="height" multiplier="1:1" id="K3e-BY-O9E"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="vNn-bP-WkT">
+                                                    <rect key="frame" x="0.0" y="617" width="374" height="30"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YH-yD-iII" customClass="LikeControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="8" width="60.5" height="22"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="Cnw-6p-lHQ"/>
+                                                                <constraint firstAttribute="height" constant="22" id="lHh-nu-q9A"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLiked" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                    <color key="value" systemColor="systemRedColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="likesCount">
+                                                                    <integer key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-a4-6Fp" customClass="CommentsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                                            <rect key="frame" x="104.5" y="8" width="60.5" height="22"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="8xX-9o-ZAa"/>
+                                                                <constraint firstAttribute="height" constant="22" id="wCe-P1-N6D"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLiked" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="likesCount">
+                                                                    <integer key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                    <color key="value" systemColor="systemBlueColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="commentsCount">
+                                                                    <integer key="value" value="33"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQT-9D-Evg" customClass="RepostsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                                            <rect key="frame" x="209" y="8" width="60.5" height="22"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="BJ7-wy-jhO"/>
+                                                                <constraint firstAttribute="height" constant="22" id="tNn-AO-Tfk"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLiked" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                    <color key="value" systemColor="systemBlueColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="likesCount">
+                                                                    <integer key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="repostsCount">
+                                                                    <integer key="value" value="55"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-ki-O4s" customClass="ViewsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
+                                                            <rect key="frame" x="313.5" y="8" width="60.5" height="22"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="Dlc-UF-XQs"/>
+                                                                <constraint firstAttribute="width" constant="55" id="Uj5-Mu-31w"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLiked" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                    <color key="value" systemColor="systemBlueColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="likesCount">
+                                                                    <integer key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="viewsCount">
+                                                                    <integer key="value" value="125"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Ja9-3L-XZ4"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TJh-5u-yzA" secondAttribute="trailing" id="T0O-sL-Puz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TJh-5u-yzA" secondAttribute="bottom" id="VIs-Oa-kUQ"/>
+                                        <constraint firstItem="TJh-5u-yzA" firstAttribute="top" secondItem="Ubn-JC-vxd" secondAttribute="topMargin" id="ZyE-no-Qpv"/>
+                                        <constraint firstItem="TJh-5u-yzA" firstAttribute="leading" secondItem="Ubn-JC-vxd" secondAttribute="leadingMargin" id="csV-rB-3fk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorImageView" destination="Qed-sZ-7eP" id="kXP-E0-615"/>
+                                    <outlet property="authorLabel" destination="xzq-PP-D76" id="x5K-mR-rPK"/>
+                                    <outlet property="dateLabel" destination="BMN-hs-cFO" id="3Kk-lv-qQg"/>
+                                    <outlet property="newsPhoto" destination="g8G-6B-wlv" id="j2z-3k-NLo"/>
+                                    <outlet property="newsTextLabel" destination="WKs-kh-tDB" id="WYc-je-ZZn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qfT-8v-hOg" id="0oe-lX-BUU"/>
+                            <outlet property="delegate" destination="qfT-8v-hOg" id="Qkc-t0-zJl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="dDC-aM-Dzj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7k-VY-xnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611.59420289855075" y="185.49107142857142"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="Knl-VD-Jqy">
+            <objects>
+                <navigationController id="bNM-C5-d9O" customClass="CustomNavigationViewController" customModule="VK_Client_Romashkov" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="oMa-Zj-0Bw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jo0-xt-mE5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qfT-8v-hOg" kind="relationship" relationship="rootViewController" id="LZl-Ze-3cQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzM-Kf-Qel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="186"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IamProgrammist" width="320" height="320"/>
+        <image name="newCode" width="1280" height="640"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
