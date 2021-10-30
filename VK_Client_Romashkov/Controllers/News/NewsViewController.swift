@@ -13,8 +13,6 @@ final class NewsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //раз два три
     }
     
     // MARK: - Properties

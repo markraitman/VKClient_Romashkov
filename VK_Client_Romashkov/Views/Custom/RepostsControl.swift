@@ -15,7 +15,7 @@ final class RepostsControl: UIControl {
     @IBInspectable
     var isReposted: Bool = false {
         didSet {
-            updateRepost()
+            updateComment()
         }
     }
     
@@ -39,7 +39,7 @@ final class RepostsControl: UIControl {
     lazy var repostsButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "arrowshape.turn.up.right"), for: .normal)
+        button.setImage(UIImage(systemName: "arrowshape.turn.up.left"), for: .normal)
         button.tintColor = color
         button.addTarget(self,
                          action: #selector(repostsButtonTapped),
@@ -51,7 +51,7 @@ final class RepostsControl: UIControl {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = color
-        label.text = "55"
+        label.text = "11"
         return label
     }()
     
@@ -107,8 +107,8 @@ final class RepostsControl: UIControl {
                        completion: nil)
     }
     
-    private func updateRepost() {
-        let imageName = isReposted ? "arrowshape.turn.up.right.fill" : "arrowshape.turn.up.right"
+    private func updateComment() {
+        let imageName = isReposted ? "arrowshape.turn.up.left.fill" : "arrowshape.turn.up.left"
         repostsButton.setImage(UIImage(systemName: imageName), for: .normal)
         repostsCount = isReposted ? repostsCount + 1 : repostsCount - 1
     }

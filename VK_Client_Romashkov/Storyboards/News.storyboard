@@ -108,11 +108,11 @@
                                                         <constraint firstAttribute="width" secondItem="g8G-6B-wlv" secondAttribute="height" multiplier="1:1" id="K3e-BY-O9E"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="vNn-bP-WkT">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="44" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNn-bP-WkT">
                                                     <rect key="frame" x="0.0" y="617" width="374" height="30"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YH-yD-iII" customClass="LikeControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="8" width="60.5" height="22"/>
+                                                            <rect key="frame" x="0.0" y="4" width="60.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="Cnw-6p-lHQ"/>
@@ -129,7 +129,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-a4-6Fp" customClass="CommentsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="104.5" y="8" width="60.5" height="22"/>
+                                                            <rect key="frame" x="104.5" y="4" width="60.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="8xX-9o-ZAa"/>
@@ -149,7 +149,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQT-9D-Evg" customClass="RepostsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="209" y="8" width="60.5" height="22"/>
+                                                            <rect key="frame" x="209" y="4" width="60.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="BJ7-wy-jhO"/>
@@ -164,12 +164,12 @@
                                                                     <integer key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="repostsCount">
-                                                                    <integer key="value" value="55"/>
+                                                                    <integer key="value" value="11"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-ki-O4s" customClass="ViewsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="313.5" y="8" width="60.5" height="22"/>
+                                                            <rect key="frame" x="313.5" y="4" width="60.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="Dlc-UF-XQs"/>
