@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum PostCellType: Int, CaseIterable {
+    case author
+    case text
+    case photo
+    case likeCount
+}
+
 final class NewsViewController: UITableViewController {
     
     // MARK: - Life cycle
@@ -18,55 +25,72 @@ final class NewsViewController: UITableViewController {
     // MARK: - Properties
     
     private var news = [
-        News(authorAvatar: UIImage(named: "Habr"),
-             author: "Habr",
-             date: "08.01.2021",
-             text: "Электромеханический арифмометр ВК-2. Название расшифровывается как Вычислитель Клавишный, вторая модель. Слово «клавишный», вынесенное в название, призвано подчеркнуть одно из основных достоинств машины — ввод чисел и операций с помощью клавиш: http://amp.gs/MIyZ",
-             photo: UIImage(named: "BK-2")),
-        News(authorAvatar: UIImage(named: "ITHumor"),
-             author: "ITHumor",
-             date: "07.01.2021",
-             text: "Два — это много?",
-             photo: UIImage(named: "followers")),
-        News(authorAvatar: UIImage(named: "GeekBrains"),
-             author: "GeekBrains",
-             date: "07.01.2021",
-             text: "Как попасть в геймдев? Именно этой теме был посвящен осенний митап, который мы провели совместно с TalentsInGames. На встрече обсудили поиск работы после курсов, собеседования, зарплату на стартовых позициях и многое другое. Всю информацию отразили для вас в статье: http://amp.gs/MIN3",
-             photo: UIImage(named: "gameDev")),
-        News(authorAvatar: UIImage(named: "IamProgrammist"),
-             author: "IamProgrammist",
-             date: "06.01.2021",
-             text: "С Новым кодом!",
-             photo: UIImage(named: "newCode")),
-        News(authorAvatar: UIImage(named: "ITHumor"),
-             author: "ITHumor",
-             date: "05.01.2021",
-             text: "Спокойной ночи!",
-             photo: UIImage(named: "goodNight")),
+        News(newsAuthorAvatar: UIImage(named: "Habr"),
+             newsAuthorName: "Habr",
+             newsDate: "08.01.2021",
+             newsText: "Электромеханический арифмометр ВК-2. Название расшифровывается как Вычислитель Клавишный, вторая модель. Слово «клавишный», вынесенное в название, призвано подчеркнуть одно из основных достоинств машины — ввод чисел и операций с помощью клавиш: http://amp.gs/MIyZ"),
+        News(newsAuthorAvatar: UIImage(named: "ITHumor"),
+             newsAuthorName: "ITHumor",
+             newsDate: "07.01.2021",
+             newsPhoto: UIImage(named: "followers")),
+        News(newsAuthorAvatar: UIImage(named: "GeekBrains"),
+             newsAuthorName: "GeekBrains",
+             newsDate: "07.01.2021",
+             newsText: "Как попасть в геймдев? Именно этой теме был посвящен осенний митап, который мы провели совместно с TalentsInGames. На встрече обсудили поиск работы после курсов, собеседования, зарплату на стартовых позициях и многое другое. Всю информацию отразили для вас в статье: http://amp.gs/MIN3"),
+        News(newsAuthorAvatar: UIImage(named: "IamProgrammist"),
+             newsAuthorName: "IamProgrammist",
+             newsDate: "06.01.2021",
+             newsPhoto: UIImage(named: "newCode")),
+        News(newsAuthorAvatar: UIImage(named: "ITHumor"),
+             newsAuthorName: "ITHumor",
+             newsDate: "05.01.2021",
+             newsPhoto: UIImage(named: "goodNight")),
     ]
     
     // MARK: - Section
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return news.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        news.count
+        return PostCellType.allCases.count
     }
     
     // MARK: - Cell
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsCell
         
-        let allNews = news[indexPath.row]
-        cell.authorImageView.image = allNews.authorAvatar
-        cell.authorLabel.text = allNews.author
-        cell.dateLabel.text = allNews.date
-        cell.newsTextLabel.text = allNews.text
-        cell.newsPhoto.image = allNews.photo
+        let item = news[indexPath.section]
+        let postCellType = PostCellType(rawValue: indexPath.row)
         
-        return cell
+        switch postCellType {
+        case .author:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorOfFeedTableViewCell", for: indexPath) as! AuthorOfFeedTableViewCell
+            cell.authorImageView.image = item.newsAuthorAvatar
+            cell.authorLabel.text = item.newsAuthorName
+            cell.dateLabel.text = item.newsDate
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+            return cell
+            
+        case .text:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextOfFeedTableViewCell", for: indexPath) as! TextOfFeedTableViewCell
+            cell.newsTextView.text = item.newsText
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+            return cell
+            
+        case .photo:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoOfFeedTableViewCell", for: indexPath) as! PhotoOfFeedTableViewCell
+            cell.newsPhoto.image = item.newsPhoto
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+            return cell
+            
+        case .likeCount:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeCountTableViewCell", for: indexPath) as! LikeCountTableViewCell
+            return cell
+            
+        default:
+            return UITableViewCell()
+        }
     }
 }
