@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF0DA1B525EBEA8200128BD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DA1B425EBEA8200128BD2 /* Session.swift */; };
+		CF3B4CEB273440E9006AE502 /* NewsfeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4CEA273440E9006AE502 /* NewsfeedService.swift */; };
 		CF3CA71125E16CCE00341FEB /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3CA71025E16CCE00341FEB /* FlipPresentAnimationController.swift */; };
 		CF3CA71425E16CFF00341FEB /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3CA71325E16CFF00341FEB /* FlipDismissAnimationController.swift */; };
 		CF459F482684EB6B00BCEE69 /* CommentsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF459F472684EB6B00BCEE69 /* CommentsControl.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		CF0DA1B425EBEA8200128BD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CF3B4CEA273440E9006AE502 /* NewsfeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedService.swift; sourceTree = "<group>"; };
 		CF3CA71025E16CCE00341FEB /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		CF3CA71325E16CFF00341FEB /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
 		CF459F472684EB6B00BCEE69 /* CommentsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsControl.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				CF0DA1B425EBEA8200128BD2 /* Session.swift */,
 				CFFD5D5425F285B200BD2609 /* VKAPIService.swift */,
+				CF3B4CEA273440E9006AE502 /* NewsfeedService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				CFC1B1ED253828EF008EE3C6 /* SceneDelegate.swift in Sources */,
 				CF3CA71425E16CFF00341FEB /* FlipDismissAnimationController.swift in Sources */,
 				CFC1739B255826550027B05A /* MyGroupsTableViewController.swift in Sources */,
+				CF3B4CEB273440E9006AE502 /* NewsfeedService.swift in Sources */,
 				CF3CA71125E16CCE00341FEB /* FlipPresentAnimationController.swift in Sources */,
 				CFDE96C325E7FDFE00F6DECD /* ExtendedFullScreenViewController.swift in Sources */,
 				CFC173A1255826880027B05A /* MyFriendsViewController.swift in Sources */,
