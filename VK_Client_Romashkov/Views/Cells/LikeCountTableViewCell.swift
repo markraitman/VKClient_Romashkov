@@ -7,7 +7,11 @@
 
 import UIKit
 
-class LikeCountTableViewCell: UITableViewCell {
+class LikeCountTableViewCell: UITableViewCell, NewsCellProtocol {
+    
+    func configure(item: NewsfeedItem) {
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

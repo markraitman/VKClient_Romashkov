@@ -7,8 +7,13 @@
 
 import UIKit
 
-class PhotoOfFeedTableViewCell: UITableViewCell {
+class PhotoOfFeedTableViewCell: UITableViewCell, NewsCellProtocol {
 
     @IBOutlet weak var newsPhoto: UIImageView!
+    
+    func configure(item: NewsfeedItem) {
+//        newsPhoto.image = item.newsPhoto
+        newsPhoto.image = UIImage()
+    }
 
 }

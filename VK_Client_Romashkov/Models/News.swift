@@ -7,10 +7,16 @@
 
 import UIKit
 
+enum NewsItemType {
+    case post
+    case image
+}
+
 struct News {
     var newsAuthorAvatar: UIImage?
     var newsAuthorName: String
     var newsDate: String
     var newsText: String?
     var newsPhoto: UIImage?
+    var type: NewsItemType
 }

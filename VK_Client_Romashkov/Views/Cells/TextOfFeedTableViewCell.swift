@@ -7,8 +7,13 @@
 
 import UIKit
 
-class TextOfFeedTableViewCell: UITableViewCell {
+class TextOfFeedTableViewCell: UITableViewCell, NewsCellProtocol {
 
     @IBOutlet weak var newsTextView: UITextView!
+    
+    func configure(item: NewsfeedItem) {
+//        newsTextView.text = item.text
+        newsTextView.text = "item.text"
+    }
 
 }

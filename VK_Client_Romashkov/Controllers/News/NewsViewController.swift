@@ -9,8 +9,7 @@ import UIKit
 
 enum PostCellType: Int, CaseIterable {
     case author
-    case text
-    case photo
+    case content
     case likeCount
 }
 
@@ -20,32 +19,49 @@ final class NewsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        service.get { [weak self] (items) in
+            self?.news = items
+            self?.tableView.reloadData()
+        }
     }
+    
+    // MARK: - Web Service
+    
+    lazy var service = VKNewsfeedService()
     
     // MARK: - Properties
     
-    private var news = [
-        News(newsAuthorAvatar: UIImage(named: "Habr"),
-             newsAuthorName: "Habr",
-             newsDate: "08.01.2021",
-             newsText: "Электромеханический арифмометр ВК-2. Название расшифровывается как Вычислитель Клавишный, вторая модель. Слово «клавишный», вынесенное в название, призвано подчеркнуть одно из основных достоинств машины — ввод чисел и операций с помощью клавиш: http://amp.gs/MIyZ"),
-        News(newsAuthorAvatar: UIImage(named: "ITHumor"),
-             newsAuthorName: "ITHumor",
-             newsDate: "07.01.2021",
-             newsPhoto: UIImage(named: "followers")),
-        News(newsAuthorAvatar: UIImage(named: "GeekBrains"),
-             newsAuthorName: "GeekBrains",
-             newsDate: "07.01.2021",
-             newsText: "Как попасть в геймдев? Именно этой теме был посвящен осенний митап, который мы провели совместно с TalentsInGames. На встрече обсудили поиск работы после курсов, собеседования, зарплату на стартовых позициях и многое другое. Всю информацию отразили для вас в статье: http://amp.gs/MIN3"),
-        News(newsAuthorAvatar: UIImage(named: "IamProgrammist"),
-             newsAuthorName: "IamProgrammist",
-             newsDate: "06.01.2021",
-             newsPhoto: UIImage(named: "newCode")),
-        News(newsAuthorAvatar: UIImage(named: "ITHumor"),
-             newsAuthorName: "ITHumor",
-             newsDate: "05.01.2021",
-             newsPhoto: UIImage(named: "goodNight")),
-    ]
+    var news: [NewsfeedItem] = []
+    
+    
+//    private var news = [
+//        News(newsAuthorAvatar: UIImage(named: "Habr"),
+//             newsAuthorName: "Habr",
+//             newsDate: "08.01.2021",
+//             newsText: "Электромеханический арифмометр ВК-2. Название расшифровывается как Вычислитель Клавишный, вторая модель. Слово «клавишный», вынесенное в название, призвано подчеркнуть одно из основных достоинств машины — ввод чисел и операций с помощью клавиш: http://amp.gs/MIyZ",
+//             type: .post),
+//        News(newsAuthorAvatar: UIImage(named: "ITHumor"),
+//             newsAuthorName: "ITHumor",
+//             newsDate: "07.01.2021",
+//             newsPhoto: UIImage(named: "followers"),
+//             type: .image),
+//        News(newsAuthorAvatar: UIImage(named: "GeekBrains"),
+//             newsAuthorName: "GeekBrains",
+//             newsDate: "07.01.2021",
+//             newsText: "Как попасть в геймдев? Именно этой теме был посвящен осенний митап, который мы провели совместно с TalentsInGames. На встрече обсудили поиск работы после курсов, собеседования, зарплату на стартовых позициях и многое другое. Всю информацию отразили для вас в статье: http://amp.gs/MIN3",
+//             type: .post),
+//        News(newsAuthorAvatar: UIImage(named: "IamProgrammist"),
+//             newsAuthorName: "IamProgrammist",
+//             newsDate: "06.01.2021",
+//             newsPhoto: UIImage(named: "newCode"),
+//             type: .image),
+//        News(newsAuthorAvatar: UIImage(named: "ITHumor"),
+//             newsAuthorName: "ITHumor",
+//             newsDate: "05.01.2021",
+//             newsPhoto: UIImage(named: "goodNight"),
+//             type: .image)
+//    ]
     
     // MARK: - Section
     
@@ -63,34 +79,35 @@ final class NewsViewController: UITableViewController {
         
         let item = news[indexPath.section]
         let postCellType = PostCellType(rawValue: indexPath.row)
+        var cellIdentifier = ""
         
         switch postCellType {
+        
         case .author:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorOfFeedTableViewCell", for: indexPath) as! AuthorOfFeedTableViewCell
-            cell.authorImageView.image = item.newsAuthorAvatar
-            cell.authorLabel.text = item.newsAuthorName
-            cell.dateLabel.text = item.newsDate
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            return cell
+            cellIdentifier = "AuthorOfFeedTableViewCell"
             
-        case .text:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextOfFeedTableViewCell", for: indexPath) as! TextOfFeedTableViewCell
-            cell.newsTextView.text = item.newsText
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            return cell
-            
-        case .photo:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoOfFeedTableViewCell", for: indexPath) as! PhotoOfFeedTableViewCell
-            cell.newsPhoto.image = item.newsPhoto
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            return cell
+        case .content:
+            cellIdentifier = contentCellIdentifier(item)
             
         case .likeCount:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeCountTableViewCell", for: indexPath) as! LikeCountTableViewCell
-            return cell
+            cellIdentifier = "LikeCountTableViewCell"
             
         default:
             return UITableViewCell()
+        }
+        
+        cellIdentifier = "LikeCountTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! NewsCell
+        cell.configure(item: item)
+        return cell
+    }
+    
+    private func contentCellIdentifier(_ item: NewsfeedItem) -> String{
+        switch item.type {
+        case .post:
+            return "TextOfFeedTableViewCell"
+        case .image:
+            return "PhotoOfFeedTableViewCell"
         }
     }
 }
