@@ -11,12 +11,21 @@
         }
       },
       {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa",
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "d6f68b8f613dca3b13430da5e0be5d27b500f486",
-          "version": "10.7.7"
+          "revision": "318e319998bf555c3e914d5c3adb6da05af86a32",
+          "version": "7.1.1"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "328425bfc372ce77ec1f4f2701f61ececbb97d84",
+          "version": "10.19.0"
         }
       },
       {
@@ -24,8 +33,17 @@
         "repositoryURL": "https://github.com/realm/realm-core",
         "state": {
           "branch": null,
-          "revision": "018adb3469c2882904febca251778129ef4a9b70",
-          "version": "10.7.2"
+          "revision": "b170db6a47789ff5f2fbc3eeed0220b4b0a3f6b7",
+          "version": "11.6.0"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
+        "state": {
+          "branch": null,
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": "5.0.1"
         }
       }
     ]

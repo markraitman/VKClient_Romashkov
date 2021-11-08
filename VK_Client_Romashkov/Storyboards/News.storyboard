@@ -11,26 +11,26 @@
         <scene sceneID="Pot-YU-3bN">
             <objects>
                 <tableViewController id="qfT-8v-hOg" customClass="NewsViewController" customModule="VK_Client_Romashkov" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h98-kB-cHx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h98-kB-cHx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorOfFeedTableViewCell" id="O4J-LM-hz9" customClass="AuthorOfFeedTableViewCell" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="72.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O4J-LM-hz9" id="Ubn-JC-vxd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TJh-5u-yzA">
-                                            <rect key="frame" x="20" y="11" width="374" height="50.5"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="50"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-M9-MJT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-sZ-7eP" customClass="AvatarControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.5" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="OMw-BF-iGE"/>
@@ -50,7 +50,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zj1-dt-5o0">
-                                                            <rect key="frame" x="60" y="0.5" width="314" height="50"/>
+                                                            <rect key="frame" x="60" y="0.0" width="314" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя группы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-PP-D76">
                                                                     <rect key="frame" x="0.0" y="0.0" width="95.5" height="20"/>
@@ -97,20 +97,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LikeCountTableViewCell" id="UsW-r1-S9E" customClass="LikeCountTableViewCell" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100.5" width="414" height="52.5"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UsW-r1-S9E" id="bxq-gl-lSh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="52.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-mp-yyx">
-                                            <rect key="frame" x="20" y="11" width="374" height="30.5"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="31"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="TZ6-ri-In4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="30.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KU-rg-sU2" customClass="LikeControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="4.5" width="63.5" height="22"/>
+                                                            <rect key="frame" x="0.0" y="4" width="63.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="Eg1-73-46j"/>
@@ -127,7 +127,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy3-0L-JQx" customClass="CommentsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="103.5" y="4.5" width="63.5" height="22"/>
+                                                            <rect key="frame" x="103.5" y="4" width="63.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="6hM-UH-fC2"/>
@@ -147,7 +147,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAk-u1-f0M" customClass="RepostsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="207" y="4.5" width="63.5" height="22"/>
+                                                            <rect key="frame" x="207" y="4" width="63.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="gjZ-6G-3XO"/>
@@ -167,7 +167,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01W-eM-cBO" customClass="ViewsControl" customModule="VK_Client_Romashkov" customModuleProvider="target">
-                                                            <rect key="frame" x="310.5" y="4.5" width="63.5" height="22"/>
+                                                            <rect key="frame" x="310.5" y="4" width="63.5" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="CJT-Jz-sDh"/>
@@ -191,6 +191,13 @@
                                                         <constraint firstAttribute="height" constant="30" id="eCr-Lp-fiN"/>
                                                     </constraints>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sp-6J-M6o">
+                                                    <rect key="frame" x="0.0" y="30" width="374" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="P3t-7Y-yc4"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -300,6 +307,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF0DA1B525EBEA8200128BD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DA1B425EBEA8200128BD2 /* Session.swift */; };
-		CF3B4CEB273440E9006AE502 /* NewsfeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4CEA273440E9006AE502 /* NewsfeedService.swift */; };
 		CF3CA71125E16CCE00341FEB /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3CA71025E16CCE00341FEB /* FlipPresentAnimationController.swift */; };
 		CF3CA71425E16CFF00341FEB /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3CA71325E16CFF00341FEB /* FlipDismissAnimationController.swift */; };
 		CF459F482684EB6B00BCEE69 /* CommentsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF459F472684EB6B00BCEE69 /* CommentsControl.swift */; };
@@ -31,8 +30,6 @@
 		CF8B9BE4272EDA970016ACA1 /* TextOfFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B9BE3272EDA970016ACA1 /* TextOfFeedTableViewCell.swift */; };
 		CF8B9BE7272EDAB70016ACA1 /* PhotoOfFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B9BE6272EDAB70016ACA1 /* PhotoOfFeedTableViewCell.swift */; };
 		CF8B9BEA272EDAC60016ACA1 /* LikeCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B9BE9272EDAC60016ACA1 /* LikeCountTableViewCell.swift */; };
-		CF9A7A2E2606134F007DC58F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF9A7A2D2606134F007DC58F /* RealmSwift */; };
-		CF9A7A302606134F007DC58F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CF9A7A2F2606134F007DC58F /* Realm */; };
 		CFAA055E25F148C200EC1502 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA055D25F148C200EC1502 /* LoginWebViewController.swift */; };
 		CFC1739B255826550027B05A /* MyGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1739A255826550027B05A /* MyGroupsTableViewController.swift */; };
 		CFC1739E255826740027B05A /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1739D255826740027B05A /* AllGroupsTableViewController.swift */; };
@@ -48,6 +45,12 @@
 		CFC1B1EF253828EF008EE3C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1B1EE253828EF008EE3C6 /* LoginViewController.swift */; };
 		CFC1B1F4253828F0008EE3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC1B1F3253828F0008EE3C6 /* Assets.xcassets */; };
 		CFC1B1F7253828F0008EE3C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC1B1F5253828F0008EE3C6 /* LaunchScreen.storyboard */; };
+		CFCAFA242738257B00ED3E50 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CFCAFA232738257B00ED3E50 /* SwiftyJSON */; };
+		CFCAFA27273826AD00ED3E50 /* VKNewsfeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCAFA26273826AD00ED3E50 /* VKNewsfeedService.swift */; };
+		CFCAFA2D27396F2000ED3E50 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CFCAFA2C27396F2000ED3E50 /* Realm */; };
+		CFCAFA2F27396F2000ED3E50 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFCAFA2E27396F2000ED3E50 /* RealmSwift */; };
+		CFCAFA32273981D300ED3E50 /* NewsCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCAFA31273981D200ED3E50 /* NewsCellProtocol.swift */; };
+		CFCAFA372739899A00ED3E50 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CFCAFA362739899A00ED3E50 /* Kingfisher */; };
 		CFD1857B2588EA46007626FA /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1857A2588EA46007626FA /* LikeControl.swift */; };
 		CFD3AF0C260D17D600FF8E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC1B1F0253828EF008EE3C6 /* Main.storyboard */; };
 		CFDE96C325E7FDFE00F6DECD /* ExtendedFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE96C225E7FDFE00F6DECD /* ExtendedFullScreenViewController.swift */; };
@@ -60,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		CF0DA1B425EBEA8200128BD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		CF3B4CEA273440E9006AE502 /* NewsfeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedService.swift; sourceTree = "<group>"; };
 		CF3CA71025E16CCE00341FEB /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		CF3CA71325E16CFF00341FEB /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
 		CF459F472684EB6B00BCEE69 /* CommentsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsControl.swift; sourceTree = "<group>"; };
@@ -101,6 +103,8 @@
 		CFC1B1F3253828F0008EE3C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFC1B1F6253828F0008EE3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFC1B1F8253828F0008EE3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCAFA26273826AD00ED3E50 /* VKNewsfeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNewsfeedService.swift; sourceTree = "<group>"; };
+		CFCAFA31273981D200ED3E50 /* NewsCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellProtocol.swift; sourceTree = "<group>"; };
 		CFD1857A2588EA46007626FA /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		CFDE96C225E7FDFE00F6DECD /* ExtendedFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedFullScreenViewController.swift; sourceTree = "<group>"; };
 		CFDFAC6E25C83545006DE26E /* FullScreenPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPhotosViewController.swift; sourceTree = "<group>"; };
@@ -114,9 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF9A7A302606134F007DC58F /* Realm in Frameworks */,
-				CF9A7A2E2606134F007DC58F /* RealmSwift in Frameworks */,
+				CFCAFA2F27396F2000ED3E50 /* RealmSwift in Frameworks */,
+				CFCAFA2D27396F2000ED3E50 /* Realm in Frameworks */,
+				CFCAFA242738257B00ED3E50 /* SwiftyJSON in Frameworks */,
 				CFF9B11B25F125140019D5CF /* Alamofire in Frameworks */,
+				CFCAFA372739899A00ED3E50 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +134,7 @@
 			children = (
 				CF0DA1B425EBEA8200128BD2 /* Session.swift */,
 				CFFD5D5425F285B200BD2609 /* VKAPIService.swift */,
-				CF3B4CEA273440E9006AE502 /* NewsfeedService.swift */,
+				CFCAFA26273826AD00ED3E50 /* VKNewsfeedService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				CF8B9BE3272EDA970016ACA1 /* TextOfFeedTableViewCell.swift */,
 				CF8B9BE6272EDAB70016ACA1 /* PhotoOfFeedTableViewCell.swift */,
 				CF8B9BE9272EDAC60016ACA1 /* LikeCountTableViewCell.swift */,
+				CFCAFA31273981D200ED3E50 /* NewsCellProtocol.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,8 +354,10 @@
 			name = VK_Client_Romashkov;
 			packageProductDependencies = (
 				CFF9B11A25F125140019D5CF /* Alamofire */,
-				CF9A7A2D2606134F007DC58F /* RealmSwift */,
-				CF9A7A2F2606134F007DC58F /* Realm */,
+				CFCAFA232738257B00ED3E50 /* SwiftyJSON */,
+				CFCAFA2C27396F2000ED3E50 /* Realm */,
+				CFCAFA2E27396F2000ED3E50 /* RealmSwift */,
+				CFCAFA362739899A00ED3E50 /* Kingfisher */,
 			);
 			productName = VK_Client_Romashkov;
 			productReference = CFC1B1E7253828EF008EE3C6 /* VK_Client_Romashkov.app */;
@@ -379,7 +388,9 @@
 			mainGroup = CFC1B1DE253828EF008EE3C6;
 			packageReferences = (
 				CFF9B11925F125140019D5CF /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CF9A7A2C2606134F007DC58F /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				CFCAFA222738257B00ED3E50 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				CFCAFA2B27396F2000ED3E50 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				CFCAFA352739899A00ED3E50 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CFC1B1E8253828EF008EE3C6 /* Products */;
 			projectDirPath = "";
@@ -437,7 +448,6 @@
 				CFC1B1ED253828EF008EE3C6 /* SceneDelegate.swift in Sources */,
 				CF3CA71425E16CFF00341FEB /* FlipDismissAnimationController.swift in Sources */,
 				CFC1739B255826550027B05A /* MyGroupsTableViewController.swift in Sources */,
-				CF3B4CEB273440E9006AE502 /* NewsfeedService.swift in Sources */,
 				CF3CA71125E16CCE00341FEB /* FlipPresentAnimationController.swift in Sources */,
 				CFDE96C325E7FDFE00F6DECD /* ExtendedFullScreenViewController.swift in Sources */,
 				CFC173A1255826880027B05A /* MyFriendsViewController.swift in Sources */,
@@ -446,10 +456,12 @@
 				CF8B9BEA272EDAC60016ACA1 /* LikeCountTableViewCell.swift in Sources */,
 				CF64E0BD25A33F2800D50497 /* News.swift in Sources */,
 				CF8B9BE0272EDA670016ACA1 /* AuthorOfFeedTableViewCell.swift in Sources */,
+				CFCAFA32273981D300ED3E50 /* NewsCellProtocol.swift in Sources */,
 				CF64E0BA25A309C000D50497 /* NewsViewController.swift in Sources */,
 				CF5EFC2125ACB4AB00223FED /* LounchViewController.swift in Sources */,
 				CF8B9BE7272EDAB70016ACA1 /* PhotoOfFeedTableViewCell.swift in Sources */,
 				CF6E198025D84371007E5476 /* CustomPushAnimator.swift in Sources */,
+				CFCAFA27273826AD00ED3E50 /* VKNewsfeedService.swift in Sources */,
 				CF459F4E2684EB8F00BCEE69 /* ViewsControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,12 +666,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CF9A7A2C2606134F007DC58F /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		CFCAFA222738257B00ED3E50 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa";
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 10.7.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		CFCAFA2B27396F2000ED3E50 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+		CFCAFA352739899A00ED3E50 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
 			};
 		};
 		CFF9B11925F125140019D5CF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -673,15 +701,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CF9A7A2D2606134F007DC58F /* RealmSwift */ = {
+		CFCAFA232738257B00ED3E50 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CF9A7A2C2606134F007DC58F /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = CFCAFA222738257B00ED3E50 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		CFCAFA2C27396F2000ED3E50 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFCAFA2B27396F2000ED3E50 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		CFCAFA2E27396F2000ED3E50 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFCAFA2B27396F2000ED3E50 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
-		CF9A7A2F2606134F007DC58F /* Realm */ = {
+		CFCAFA362739899A00ED3E50 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CF9A7A2C2606134F007DC58F /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
+			package = CFCAFA352739899A00ED3E50 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		CFF9B11A25F125140019D5CF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

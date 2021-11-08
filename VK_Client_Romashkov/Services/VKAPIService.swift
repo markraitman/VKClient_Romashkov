@@ -32,7 +32,7 @@ class VKAPIService {
             URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
             URLQueryItem(name: "scope", value: "2703421"),
             URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: "5.68")
+            URLQueryItem(name: "v", value: "5.81")
         ]
         return URLRequest(url: components.url!)
     }
@@ -43,10 +43,10 @@ class VKAPIService {
         let methodUrl = "/friends.get"
         let url = baseUrl + methodUrl
         let parameters: Parameters = [
-            "user_ids" : "\(Session.instance.userId)",
+            "user_id" : "\(Session.instance.userId)",
             "access_token" : Session.instance.token,
             "fields" : "photo_100",
-            "v" : "5.68"
+            "v" : "5.81"
         ]
         
         AF.request(url, method: .get, parameters: parameters).responseData { [weak self] (response) in
@@ -86,7 +86,7 @@ class VKAPIService {
             "owner_id" : "\(ownerId)",
             "photo_sizes" : "1",
             "count" : "200",
-            "v" : "5.68"
+            "v" : "5.81"
         ]
         
         AF.request(url, method: .get, parameters: parameters).responseData { [weak self] (response) in
@@ -125,7 +125,7 @@ class VKAPIService {
             "access_token" : Session.instance.token,
             "extended" : "1",
             "fields" : "photo_100",
-            "v" : "5.68"
+            "v" : "5.81"
         ]
         
         AF.request(url, method: .get, parameters: parameters).responseData { [weak self] (response) in
@@ -165,7 +165,7 @@ class VKAPIService {
             "extended" : "1",
             "fields" : "photo_100",
             "q" : searchText.lowercased(),
-            "v" : "5.68"
+            "v" : "5.81"
         ]
         
         AF.request(url, method: .get, parameters: parameters).responseData { (response) in
